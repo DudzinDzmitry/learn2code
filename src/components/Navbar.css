@@ -10,13 +10,13 @@ nav {
     position: sticky;
     top: 0;
 }
-@media screen {
-    .logo img{
-        width: 40px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+
+.logo img{
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
+
 nav ul {
     display: flex;
     padding: 0px;
