@@ -1,8 +1,9 @@
-/* #root {
+.courselist {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-} */
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
 .coursepanel {
     align-self: stretch;
     display: flex;

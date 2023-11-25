@@ -9,6 +9,31 @@ export const Home = () => {
         <h1>Algorithms & Data Structures</h1>
         <p>Learn the building blocks of any program</p>
       </div>
+      <div className="coursepanel">
+        <img src={mf}/>
+        <h1>Algorithms & Data Structures</h1>
+        <p>Learn the building blocks of any program</p>
+      </div>
+      <div className="coursepanel">
+        <img src={mf}/>
+        <h1>Algorithms & Data Structures</h1>
+        <p>Learn the building blocks of any program</p>
+      </div>
+      <div className="coursepanel">
+        <img src={mf}/>
+        <h1>Algorithms & Data Structures</h1>
+        <p>Learn the building blocks of any program</p>
+      </div>
+      <div className="coursepanel">
+        <img src={mf}/>
+        <h1>Algorithms & Data Structures</h1>
+        <p>Learn the building blocks of any program</p>
+      </div>
+      <div className="coursepanel">
+        <img src={mf}/>
+        <h1>Algorithms & Data Structures</h1>
+        <p>Learn the building blocks of any program</p>
+      </div>
     </div>
   )
 }
