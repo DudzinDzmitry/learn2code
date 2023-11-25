@@ -1,25 +1,25 @@
 .active {
-    background-color:rgb(124, 144, 144);
+    background-color:#202225;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(65, 75, 75);
+    background-color:#2F3136;
     position: sticky;
     top: 0;
 }
-
-nav .title {
-    font-size: 1.5rem;
-    margin: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+@media screen {
+    .logo img{
+        width: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 }
-
 nav ul {
     display: flex;
+    padding: 0px;
 }
 
 nav ul li {
@@ -29,12 +29,12 @@ nav ul li {
 nav ul li a {
     display: block;
     text-decoration: none;
-    color: white;
-    padding: 0.5rem;
+    color:#EBEBEB;
+    padding: 0.25rem;
     margin: 0 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.95rem;
 }
 
 nav ul li a:not(.active):hover {
-    background-color: cornflowerblue;
+    background-color:#202225;
 }
