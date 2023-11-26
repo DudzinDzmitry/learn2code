@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core';
 
-export function Home() {
+export const Home = () => {
   return (
     <Button>YOU BELONG HERE</Button>
-  );
+  )
 }
