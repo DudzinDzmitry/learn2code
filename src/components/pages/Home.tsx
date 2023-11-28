@@ -1,7 +1,9 @@
-import { Button } from '@mantine/core';
+import { Title, Center } from '@mantine/core';
 
 export const Home = () => {
   return (
-    <Button>YOU BELONG HERE</Button>
+    <Center>
+      <Title order={1}>A structured approach to learning</Title>
+    </Center>
   )
 }
