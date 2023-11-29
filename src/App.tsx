@@ -7,18 +7,16 @@ export default function App() {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: 50 }}
       navbar={{
         width: 300, breakpoint: 'sm',
-        collapsed: { mobile: !opened }
+        collapsed: { desktop: true, mobile: !opened }
       }}
       padding="md"
     >
       <Header opened={opened} toggle={toggle} />
       <Navbar />
-      <AppShell.Main>
-        <PageSwitcher />
-      </AppShell.Main>
+      <PageSwitcher />
     </AppShell>
   );
 }
