@@ -16,6 +16,11 @@ export const Navbar = () => {
                 onClick={() => navigate('/learning')}
                 style={{ margin: '5px' }}
             />
+            <NavLink
+                label="Quiz"
+                onClick={() => navigate('/quiz')}
+                style={{ margin: '5px' }}
+            />
         </AppShell.Navbar>
     )
 }

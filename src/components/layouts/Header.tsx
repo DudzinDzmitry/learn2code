@@ -26,6 +26,11 @@ export const Header = ({ opened, toggle }: any) => {
             label="Learning"
             onClick={() => navigate('/learning')}
           />
+          <NavLink
+            label="Quiz"
+            onClick={() => navigate('/quiz')}
+            style={{ margin: '5px' }}
+          />
         </Group>
         <Button size='sm' onClick={toggleColorScheme}>
           {computedColorScheme === "dark" ? <Sun /> : <Moon />}
