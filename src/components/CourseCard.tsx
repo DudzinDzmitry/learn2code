@@ -3,6 +3,8 @@ import { Card, Image, Text } from '@mantine/core';
 export const CourseCard = ({ course }: any) => {
   return (
     <Card
+      w={350}
+      h={275}
       shadow="sm"
       padding="xl"
       component="a"
@@ -12,7 +14,7 @@ export const CourseCard = ({ course }: any) => {
       <Card.Section>
         <Image
           src={course.Poster}
-          h={160}
+          h={150}
           alt="No preview"
         />
       </Card.Section>

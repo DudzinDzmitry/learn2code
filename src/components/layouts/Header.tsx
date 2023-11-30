@@ -1,4 +1,4 @@
-import { Group, AppShell, Burger, Button, Tabs, useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
+import { Group, AppShell, Burger, UnstyledButton, Tabs, useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
 import { useNavigate, useParams } from 'react-router-dom';
 import Moon from '~icons/carbon/moon'
 import Sun from '~icons/carbon/sun'
@@ -29,9 +29,9 @@ export const Header = ({ opened, toggle }: any) => {
             <Tabs.Tab value="/quiz">Quiz</Tabs.Tab>
           </Tabs.List>
         </Tabs>
-        <Button size='sm' onClick={toggleColorScheme}>
+        <UnstyledButton size='sm' onClick={toggleColorScheme}>
           {computedColorScheme === "dark" ? <Sun /> : <Moon />}
-        </Button>
+        </UnstyledButton>
       </Group>
     </AppShell.Header>
   )
