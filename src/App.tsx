@@ -7,9 +7,10 @@ export default function App() {
 
   return (
     <AppShell
+      withBorder={false}
       header={{ height: 50 }}
       navbar={{
-        width: 300, breakpoint: 'sm',
+        width: { sm: 300 }, breakpoint: 'sm',
         collapsed: { desktop: true, mobile: !opened }
       }}
       padding="md"
