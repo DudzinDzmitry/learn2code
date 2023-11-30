@@ -1,4 +1,4 @@
-import { Flex, Card, Text } from '@mantine/core';
+import { Card, Text } from '@mantine/core';
 
 export const Quiz = () => {
   const card1: { [name: string]: string } = {
@@ -7,14 +7,13 @@ export const Quiz = () => {
   }
   const cards: any = [card1, card1, card1, card1, card1, card1, card1]
   return (
-    <Flex
-      mih={50}
-      gap="sm"
-      justify="center"
-      align="center"
-      direction="row"
-      wrap="wrap"
-    >
+    // <Group
+    //   mih={50}
+    //   justify="center"
+    //   align="center"
+    //   wrap="wrap"
+    // >
+    <div>
       {
         cards.map((card: { [name: string]: string }) => (
           <Card
@@ -27,6 +26,6 @@ export const Quiz = () => {
           </Card>
         ))
       }
-    </Flex>
+    </div>
   )
 }

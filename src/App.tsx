@@ -18,6 +18,6 @@ export default function App() {
       <Header opened={opened} toggle={toggle} />
       <Navbar />
       <PageSwitcher />
-    </AppShell>
+    </AppShell >
   );
 }
