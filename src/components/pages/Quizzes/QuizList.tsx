@@ -1,3 +1,4 @@
+import { Group } from '@mantine/core';
 import { FlashCard } from "./FlashCard"
 
 const cards: { [name: string]: string }[] = [
@@ -16,14 +17,19 @@ const cards: { [name: string]: string }[] = [
 ]
 
 export const QuizList = () => {
- 
+
   return (
-    <>
+    <Group
+      mih={50}
+      justify="center"
+      align="center"
+      wrap="wrap"
+    >
       {
         cards.map((card: { [name: string]: string }) => (
           <FlashCard card={card} />
         ))
       }
-    </>
+    </Group>
   )
 }
