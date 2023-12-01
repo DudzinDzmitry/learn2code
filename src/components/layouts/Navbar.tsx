@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 const data: { [name: string]: string }[] = [
   { "label": "Home", "link": "/" },
-  { "label": "Learning", "link": "/learning" },
-  { "label": "Quiz", "link": "/quiz" },
+  { "label": "Courses", "link": "/courses" },
+  { "label": "Quizzes", "link": "/quizzes" },
 ]
 
 export const Navbar = () => {

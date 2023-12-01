@@ -1,4 +1,4 @@
 export * from "./Home"
-export * from "./Learning"
+export * from "./Courses/CourseList"
 export * from "./NotFound"
-export * from "./Quiz"
+export * from "./Quizzes/QuizList"
