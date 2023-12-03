@@ -18,7 +18,6 @@ const Learning = () => {
           setQuery(e.target.value);
         }}
       />
-
       <CourseList courses={courses} />
     </div>
   );

@@ -1,3 +1,4 @@
+import '@mantine/core/styles.css';
 import Learning from './pages/Learning.tsx/Learning';
 // import Quiz from './pages/Quiz/Quiz';
 
