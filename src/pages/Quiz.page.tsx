@@ -9,6 +9,13 @@ export function QuizPage() {
   );
   return (
     <Stack mt={30} align="center">
+      <Button
+        onClick={() => {
+          setOpened.setItem(0, true);
+        }}
+      >
+        Start Quiz
+      </Button>
       {QUESTIONSDATA.map((card: any, index: number) => (
         <QuizModal
           opened={opened[index]}
@@ -24,15 +31,9 @@ export function QuizPage() {
             setOpened.setItem(index + 1, true);
           }}
           card={card}
+          index={index}
         />
       ))}
-      <Button
-        onClick={() => {
-          setOpened.setItem(0, true);
-        }}
-      >
-        Start Quiz
-      </Button>
     </Stack>
   );
 }
