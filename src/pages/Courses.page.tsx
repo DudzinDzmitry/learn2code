@@ -6,6 +6,7 @@ import {
   Stack,
   Autocomplete,
   Button,
+  Menu,
 } from "@mantine/core";
 import { useDisclosure, useInputState, useListState } from "@mantine/hooks";
 import { COURSESDATA } from "../assets/Courses/Courses.data";
@@ -20,9 +21,9 @@ export function CoursePage() {
   );
 
   return (
-    <Stack mt={30} align="center">
+    <Stack mt={20} align="center">
       <AddCourseModal opened={opened} close={close} setCourses={setCourses} />
-      <Group justify="center" align="center" wrap="nowrap">
+      <Group wrap="nowrap">
         <Autocomplete
           placeholder="Search..."
           value={query}
@@ -33,27 +34,41 @@ export function CoursePage() {
       </Group>
       <Group mih={50} justify="center" align="center" wrap="wrap">
         {soughtCourses.map((course: any) => (
-          <Card
-            withBorder
-            shadow="md"
-            mt={30}
-            radius="md"
-            w={350}
-            h={300}
-            component="a"
-            href={course.link}
-            target="_blank"
+          <Menu
+            trigger="hover"
+            openDelay={200}
+            closeDelay={200}
+            width={400}
+            withinPortal
           >
-            <Card.Section>
-              <Image src={course.image} h={150} alt="No preview" />
-            </Card.Section>
-            <Text fw={500} mt="sm" size="md">
-              {course.title}
-            </Text>
-            <Text mt="xs" c="dimmed" size="sm">
-              {course.description}
-            </Text>
-          </Card>
+            <Menu.Target>
+              <Card
+                withBorder
+                shadow="lg"
+                mt={20}
+                radius="md"
+                w={400}
+                h={350}
+                component="a"
+                href={course.link}
+                target="_blank"
+              >
+                <Card.Section>
+                  <Image src={course.image} h={150} alt="No preview" />
+                </Card.Section>
+                <Text fw={500} mt="sm" size="md">
+                  {course.title}
+                </Text>
+                <Text mt="xs" c="dimmed" size="sm">
+                  {course.description}
+                </Text>
+              </Card>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item>Edit</Menu.Item>
+              <Menu.Item>Delete</Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
         ))}
       </Group>
     </Stack>

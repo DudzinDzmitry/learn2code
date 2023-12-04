@@ -7,7 +7,7 @@ export function AddCourseModal({ opened, close, setCourses }) {
   const [value3, setValue3] = useInputState("");
   const [value4, setValue4] = useInputState("");
   return (
-    <Modal opened={opened} onClose={close} title="Add your course">
+    <Modal opened={opened} onClose={close} title="Add your course" centered>
       <Paper shadow="md" radius="md">
         <TextInput
           label="Course Title"
