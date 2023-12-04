@@ -3,11 +3,14 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 export function QuizModal({ opened, close, prev, next, card }) {
-  const [flipped, { toggle }] = useDisclosure(false);
+  const [flipped, { close: hideAnswer, toggle }] = useDisclosure(false);
   return (
     <Modal
       opened={opened}
-      onClose={close}
+      onClose={() => {
+        hideAnswer();
+        close();
+      }}
       w={300}
       h={300}
       withCloseButton={false}
@@ -18,7 +21,10 @@ export function QuizModal({ opened, close, prev, next, card }) {
       </Title>
       <Group justify="end" wrap="nowrap">
         <ActionIcon
-          onClick={prev}
+          onClick={() => {
+            hideAnswer();
+            prev();
+          }}
           variant="default"
           size="lg"
           aria-label="prev"
@@ -26,7 +32,10 @@ export function QuizModal({ opened, close, prev, next, card }) {
           <IconChevronLeft />
         </ActionIcon>
         <ActionIcon
-          onClick={next}
+          onClick={() => {
+            hideAnswer();
+            next();
+          }}
           variant="default"
           size="lg"
           aria-label="prev"
