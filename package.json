@@ -12,14 +12,12 @@
   "dependencies": {
     "@mantine/core": "^7.2.2",
     "@mantine/hooks": "^7.2.2",
+    "@tabler/icons-react": "^2.42.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0"
+    "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.147",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
@@ -28,11 +26,10 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "postcss-preset-mantine": "^1.11.0",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.2.2",
-    "unplugin-icons": "^0.17.4",
-    "vite": "^5.0.0"
+    "vite": "^5.0.4"
   }
 }

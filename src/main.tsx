@@ -1,20 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App.tsx'
-import { MantineProvider, createTheme } from '@mantine/core';
-import '@mantine/core/styles.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { theme } from "./theme";
+import { MantineProvider } from "@mantine/core";
+import { BrowserRouter } from "react-router-dom";
 
-const theme = createTheme({
-  /** Your theme override here */
-});
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <MantineProvider theme={theme} defaultColorScheme='light'>
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <MantineProvider theme={theme}>
+      <BrowserRouter>
         <App />
-      </MantineProvider>
-    </React.StrictMode>
-  </BrowserRouter>
-)
+      </BrowserRouter>
+    </MantineProvider>
+  </React.StrictMode>
+);
