@@ -44,7 +44,6 @@ export function CoursePage() {
         {soughtCourses.map((course: any, index: number) => (
           <>
             <EditCourseModal
-              key={index}
               opened={openedEdit[index]}
               close={() => {
                 setOpenedEdit.setItem(index, false);
