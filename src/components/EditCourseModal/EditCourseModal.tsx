@@ -1,13 +1,13 @@
 import { Button, Modal, Paper, TextInput } from "@mantine/core";
 import { useInputState } from "@mantine/hooks";
 
-export function AddCourseModal({ opened, close, setCourses }) {
-  const [value1, setValue1] = useInputState("");
-  const [value2, setValue2] = useInputState("");
-  const [value3, setValue3] = useInputState("");
-  const [value4, setValue4] = useInputState("");
+export function EditCourseModal({ opened, close, index, course, setCourses }) {
+  const [value1, setValue1] = useInputState(`${course.title}`);
+  const [value2, setValue2] = useInputState(`${course.description}`);
+  const [value3, setValue3] = useInputState(`${course.image}`);
+  const [value4, setValue4] = useInputState(`${course.link}`);
   return (
-    <Modal opened={opened} onClose={close} title="Add your course" centered>
+    <Modal opened={opened} onClose={close} title="Edit this course" centered>
       <Paper shadow="md" radius="md">
         <TextInput
           label="Course Title"
@@ -35,16 +35,12 @@ export function AddCourseModal({ opened, close, setCourses }) {
         />
         <Button
           onClick={() => {
-            setCourses.append({
+            setCourses.setItem(index, {
               title: value1,
               description: value2,
               image: value3,
               link: value4,
             });
-            setValue1("");
-            setValue2("");
-            setValue3("");
-            setValue4("");
             close();
           }}
           fullWidth
